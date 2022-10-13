@@ -9,7 +9,19 @@ local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/naypr
     AutoFarm1:AddLabel("AutoFarm Lv.")
 
     AutoFarm1:AddToggle("FastAttack",false,function(t)
-       print(not finish)
+       local Fast = require(game:GetService("Players").LocalPlayer.PlayerScripts.CombatFramework)
+local CameraShaker = require(game:GetService("Players").LocalPlayer.PlayerScripts.CombatFramework.CameraShaker)
+_G.Name = true -- true\false
+game:GetService("RunService").RenderStepped:Connect(function()
+    pcall(function()
+        if _G.Name then
+Fast.activeController.timeToNextAttack = 0
+game:GetService'VirtualUser':CaptureController()
+game:GetService'VirtualUser':Button1Down(Vector2.new(686, 352))
+CameraShaker.CameraShakeInstance.CameraShakeState = {FadingIn = 3, FadingOut = 2, Sustained = 0, Inactive = 1}
+end
+end)
+end)
     end)
 
     AutoFarm1:AddToggle("AutoFarm",false,function(t)
