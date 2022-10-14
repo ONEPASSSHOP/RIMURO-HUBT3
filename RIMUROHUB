@@ -2,7 +2,7 @@ _G.Color = Color3.fromRGB(63, 255, 41)
 _G.Color2 = Color3.fromRGB(227, 255, 41)
 
 local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/naypramx/Ui__Project/Script/XeNonUi", true))()
-    library:CreateWatermark("RIMURO HUB") -- Config แตกนะเดียวค่อยแก้รอเน็ตมาก่อน By MeowX#0001
+    library:CreateWatermark("RIMURO HUB")
     local CenterHubNo1 = library:CreateWindow("RIMUROHUB | BLOXFRUIT",Enum.KeyCode.RightControl)
     local Tab = CenterHubNo1:CreateTab("Main")
     local AutoFarm1 = Tab:CreateSector("AutoFarm","left")
@@ -25,7 +25,7 @@ end)
     end)
 
     AutoFarm1:AddToggle("AutoFarm",false,function(t)
-       print(not finish)
+       print(กดหาพ่องยังไม่เสร็จ)
     end)
 
     AutoFarm1:AddToggle("AutoFarm",false,function(t)
